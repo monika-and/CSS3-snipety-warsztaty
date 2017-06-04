@@ -46,3 +46,17 @@
     width: 100%;
     height: auto;
 }
+
+.lista ul {
+    list-style: none;
+}
+
+.lista ul li:before {
+    font-family: "fontAwesome";
+    content: "\f005";
+    margin: 0 5px 0 5px
+}
+
+input::placeholder {
+    color: green;
+}
