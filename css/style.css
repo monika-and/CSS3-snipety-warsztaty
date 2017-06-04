@@ -60,3 +60,16 @@
 input::placeholder {
     color: green;
 }
+
+.links a[href$=".doc"] {
+    color: deeppink;
+}
+
+.links a[href$=".docx"] {
+    color: deeppink;
+}
+
+:lang(en){
+    
+}
+
