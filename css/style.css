@@ -36,5 +36,10 @@
     color: aquamarine;
 }
 
+#gradient {
+    background: linear-gradient(to right, red,orange,yellow,green,blue,violet);
+    width: 100vw;
+    height: 100px;
+}
 
 
