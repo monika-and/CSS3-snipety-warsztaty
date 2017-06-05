@@ -1,3 +1,4 @@
+/* kwadraty */
 #main-div {
     width: 300px;
     height: 300px;
@@ -12,6 +13,13 @@
     position: absolute;
     transform: translate(50%, 50%);
 }
+/* #main-div #second-div
+width: 50%;
+    height: 50%;
+    background-color: pink;
+    position: absolute;
+....
+*/
 
 
 /* przycisk */
@@ -28,6 +36,8 @@
     line-height: 100px;
     text-align: center;
     color: #fff;
+    /*text-decoratio: none
+    display:inline-block */
 }
 
 .przycisk i:hover {
@@ -36,16 +46,21 @@
     color: aquamarine;
 }
 
+/* gradient */
 #gradient {
     background: linear-gradient(to right, red,orange,yellow,green,blue,violet);
     width: 100vw;
     height: 100px;
 }
 
+/* video */
+
 #video {
     width: 100%;
     height: auto;
 }
+
+/* lista - zmiana znaczników */
 
 .lista ul {
     list-style: none;
@@ -57,19 +72,138 @@
     margin: 0 5px 0 5px
 }
 
+/* placedholder zmiana koloru */
 input::placeholder {
     color: green;
 }
+/* input[type="text"]::-webkit-input-placeholder {color: green;
+} 
+input[type="text"]:-moz-placeholder {color: green;
+} 
+input[type="text"]:-moz-placeholder {color: green;
+} 
+*/ 
 
+/*zmiana koloru dla linków o rozszerzeniu .doc */
 .links a[href$=".doc"] {
     color: deeppink;
 }
 
 .links a[href$=".docx"] {
-    color: deeppink;
+    color: pink;
 }
 
-:lang(en){
+/* cytaty zmiana cudzysłowia */
+q[lang="en"], blockquote[lang="en"] {
+    quotes: "*" "*"
+}
+
+q[lang="en"]::before, blockquote[lang="en"]::before {
+    content: open-quote;
+}
+/* reguła z wykluczeniem
+q:not([lang="en"])::before, blockquote:not([lang="en"])::before {
+    content: open-quote;
+}*/
+q[lang="en"]::after, blockquote[lang="en"]::after {
+    content: close-quote;
+}
+
+q, blockquote {
+    quotes: "\0022" "\0022";
+        
+}
+
+q::before, blockquote::before {
+    content: open-quote;
+}
+
+q::after, blockquote::after {
+    content: close-quote;
+}
+/* q:lang(en){ */
+
+
+/* przyklejenie stopki do dołu strony */
+body {
+    margin-bottom: 40px;
+}
+
+footer .copyright {
+    width: 100vw;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+
+/* powiększanie zdj w backgroundzie */
+
+#first-image {
+    background-image: url(https://68.media.tumblr.com/avatar_42fe370ca389_128.png);
+}
+#img-container img {
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    overflow: hidden;
+}
+.img {
+width:100%;
+height:100%;
+background-position:center;
+background-size:cover;
+transition: all 0.5s;
+    
+}
+.zdjecie-kotek img:hover {
+   width: 700px;
+    height: auto;
+    transition: 0,5s;
+}
+
+
+
+/* bijące serce w napisie */
+
+.pulse {
+    color: red;
+    animation: pulse 2s infinite;
+}
+
+ @keyframes pulse{
+     0% 100% {
+         transform: scale(1);
+     }
+     50% {
+        transform: scale(1.5);
+     }
+}
+
+/*#napis {
+    display: inline-block;
+    width: 600px;
+    height: 100px;
+    text-align: center;
+    transform:scale(1)
+}
+#napis i {
+    color: red;
     
 }
 
+animation p > i {
+     animation-name: resize;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+ }
+ 
+ @keyframes resize {
+     0% 100% {
+         transform: scale(2);
+     }
+     50% {
+        transform: scale(1);
+     }
+}
+*/
